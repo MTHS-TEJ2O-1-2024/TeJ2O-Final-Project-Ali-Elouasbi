@@ -5,4 +5,17 @@
  * This program ...
 */
 
-basic.showString('Hello, World!')
+//setup
+basic.showIcon(IconNames.Happy)
+basic.clearScreen()
+
+//When Button A is pressed
+input.onButtonPressed(Button.A, function () {
+    devices.tellCameraTo(MesCameraEvent.TakePhoto)
+})
+
+//When Button B is pressed
+input.onButtonPressed(Button.B, function () {
+    devices.tellCameraTo(MesCameraEvent.ToggleFrontRear)
+})
+basic.showString("A = photo B = front-rear")
